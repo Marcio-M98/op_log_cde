@@ -1,0 +1,2566 @@
+/* Ajustes adaptativos para telas pequenas (bipador) */
+@media (max-width: 600px) {
+  html, body {
+    font-size: 15px !important;
+    width: 100vw !important;
+    min-width: 100vw !important;
+    max-width: 100vw !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    max-height: 100vh !important;
+    overflow-x: hidden !important;
+  }
+  .cadastro-page-solid {
+    max-width: 100vw !important;
+    min-width: 100vw !important;
+    width: 100vw !important;
+    min-height: 100vh !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+  .cadastro-header {
+    font-size: 1.2rem !important;
+    padding: 18px 0 6px 0 !important;
+    border-radius: 0 !important;
+    box-shadow: 0 1px 6px #0001 !important;
+  }
+  .cadastro-main {
+    padding: 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
+    background: #f5f5f5 !important;
+  }
+  .cadastro-form {
+    min-width: 0 !important;
+    max-width: 98vw !important;
+    width: 100vw !important;
+    margin: 0 !important;
+    padding: 16px 2vw 18px 2vw !important;
+    border-radius: 0 0 12px 12px !important;
+    box-shadow: 0 1px 6px #0001 !important;
+    border: none !important;
+    gap: 12px !important;
+  }
+  .cadastro-field label {
+    font-size: 1rem !important;
+    margin-bottom: 4px !important;
+  }
+  .cadastro-input {
+    font-size: 1.05rem !important;
+    padding: 10px 8px !important;
+    min-width: 0 !important;
+    width: 100% !important;
+  }
+  .cadastro-btn-salvar, .cadastro-btn-finalizar {
+    font-size: 1rem !important;
+    padding: 10px 0 !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    margin-bottom: 8px !important;
+  }
+  .cadastro-endereco-formatado {
+    font-size: 0.95rem !important;
+    padding: 8px 8px !important;
+    border-radius: 6px !important;
+    margin-top: 4px !important;
+  }
+  .notas-table th, .notas-table td {
+    font-size: 0.98rem !important;
+    padding: 6px 2px !important;
+  }
+  .btn-voltar {
+    font-size: 0.98rem !important;
+    padding: 4px 10px !important;
+  }
+  .modal-fullscreen {
+    padding: 0 !important;
+  }
+}
+/* --- NOVO ESTILO SÓLIDO PARA CADASTRO (renomeado) --- */
+/* Centraliza a tela de cadastro de forma otimizada */
+.cadastro-page-solid {
+    min-height: 100vh;
+    min-width: 100vw;
+    width: 100vw;
+    height: 100vh;
+    background: #e3e6ef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+}
+/* Cabeçalho fixo, visual limpo e alinhado */
+/* Cabeçalho do cadastro com padrão visual da tela inicial */
+/* Cabeçalho do cadastro com menos espaçamento inferior */
+.cadastro-header {
+    width: 100vw;
+    background: #fff;
+    color: #1a237e;
+    padding: 32px 0 4px 0;
+    text-align: center;
+    box-shadow: 0 2px 12px #0001;
+    font-size: 2.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 12px 12px 0 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+/* Centraliza o conteúdo principal da tela de cadastro */
+/* Espaço para o cabeçalho e centralização dos campos */
+/* Centraliza o conteúdo principal da tela de cadastro, padrão tela inicial */
+.cadastro-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    max-width: 100vw;
+    min-height: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #f5f5f5;
+}
+}
+/* Formulário de cadastro responsivo e centralizado */
+/* Formulário com espaçamento e campos alinhados */
+/* Formulário com espaçamento dos cantos para não grudar no fundo */
+/* Formulário de cadastro com padrão visual da tela inicial */
+/* Formulário de cadastro com menos gap entre header e campos */
+.cadastro-form {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px #0001;
+    padding: 16px 24px 24px 24px;
+    min-width: 0;
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+    box-sizing: border-box;
+    border: 1px solid #e0e0e0;
+}
+}
+/* Campo do formulário ocupa toda a largura e mantém alinhamento */
+.cadastro-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: stretch;
+    width: 100%;
+}
+/* Label do campo de cadastro */
+/* Label alinhado à esquerda, espaçamento consistente */
+.cadastro-field label {
+    font-size: 1.08rem;
+    font-weight: 600;
+    color: #1a237e;
+    margin-bottom: 6px;
+    padding-left: 0;
+    text-align: left;
+}
+/* Input do cadastro: responsivo, visual limpo e largura total */
+/* Input alinhado, visual limpo e largura total */
+.cadastro-input {
+    font-size: 1.13rem;
+    padding: 12px 10px;
+    border: 2px solid #3949ab;
+    border-radius: 6px;
+    background: #f5f7fa;
+    color: #222;
+    outline: none;
+    transition: border 0.2s, background 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 2px;
+}
+/* Destaque ao focar no input */
+.cadastro-input:focus {
+    border: 2px solid #1a237e;
+    background: #e8eaf6;
+}
+/* Botão salvar do cadastro */
+.cadastro-btn-salvar {
+    width: 100%;
+    padding: 14px 0;
+    font-size: 1.08rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+    background: #1a237e;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s, opacity 0.2s;
+    opacity: 1;
+    margin-top: 10px;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+/* Botão salvar desabilitado */
+.cadastro-btn-salvar:disabled {
+    background: #b0b4c1;
+    color: #fff;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+/* Texto formatado do endereço */
+/* Endereço formatado com mais padding e visual agradável */
+.cadastro-endereco-formatado {
+    font-size: 0.97rem;
+    color: #4b5678;
+    margin-top: 6px;
+    margin-left: 0;
+    opacity: 0.85;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    padding: 8px 14px;
+    background: #f5f7fa;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    display: inline-block;
+}
+@media (max-width: 600px) {
+    .cadastro-form {
+        min-width: 0;
+        max-width: 98vw;
+        padding: 24px 6vw 24px 6vw;
+    }
+    .cadastro-main {
+        padding: 18px 0 0 0;
+    }
+    .cadastro-header {
+        font-size: 1.3rem;
+        padding: 18px 0 10px 0;
+    }
+}
+/* Exibe endereço formatado abaixo do campo de endereço na expedição */
+.exped-endereco-formatado {
+    font-size: 0.98rem;
+    color: #4b5678;
+    margin-top: 4px;
+    margin-left: 2px;
+    opacity: 0.85;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+}
+/* --- NOVO ESTILO SÓLIDO PARA EXPEDIÇÃO --- */
+.exped-page-solid {
+    min-height: 100vh;
+    width: 100vw;
+    background: #e3e6ef;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+.exped-header {
+    width: 100vw;
+    background: #1a237e;
+    color: #fff;
+    padding: 32px 0 18px 0;
+    text-align: center;
+    box-shadow: 0 2px 8px #0001;
+    font-size: 2.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.exped-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 48px 0 0 0;
+}
+.exped-form {
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 12px #0002;
+    padding: 40px 32px 32px 32px;
+    min-width: 340px;
+    max-width: 420px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: stretch;
+}
+.exped-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.exped-field label {
+    font-size: 1.13rem;
+    font-weight: 600;
+    color: #1a237e;
+    margin-bottom: 2px;
+}
+.exped-input {
+    font-size: 1.25rem;
+    padding: 18px 12px;
+    border: 2px solid #3949ab;
+    border-radius: 6px;
+    background: #f5f7fa;
+    color: #222;
+    outline: none;
+    transition: border 0.2s, background 0.2s;
+}
+.exped-input:focus {
+    border: 2px solid #1a237e;
+    background: #e8eaf6;
+}
+.exped-btn-salvar {
+    width: 100%;
+    padding: 18px 0;
+    font-size: 1.18rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+    background: #1a237e;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s, opacity 0.2s;
+    opacity: 1;
+    margin-top: 12px;
+    letter-spacing: 0.5px;
+}
+.exped-btn-salvar:disabled {
+    background: #b0b4c1;
+    color: #fff;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+@media (max-width: 600px) {
+    .exped-form {
+        min-width: 0;
+        max-width: 98vw;
+        padding: 24px 6vw 24px 6vw;
+    }
+    .exped-main {
+        padding: 18px 0 0 0;
+    }
+    .exped-header {
+        font-size: 1.3rem;
+        padding: 18px 0 10px 0;
+    }
+}
+/* Expedição */
+.input-expedicao {
+    width: 100%;
+    font-size: 1.3em;
+    padding: 18px 12px;
+    margin: 18px 0 18px 0;
+    border: 2px solid #1976d2;
+    border-radius: 6px;
+    box-sizing: border-box;
+    outline: none;
+}
+.exped-modal {
+    margin: 18px 0 0 0;
+    padding: 18px 10px;
+    background: #f4f6fa;
+    border-radius: 8px;
+    font-size: 1.1em;
+    color: #222;
+    box-shadow: 0 1px 6px rgba(25,118,210,0.07);
+}
+.exped-modal button {
+    margin: 10px 8px 0 0;
+    padding: 10px 18px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background: #1976d2;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.exped-modal button:hover {
+    background: #125ea8;
+}
+.table-scroll {
+    max-height: 410px;
+    overflow-y: auto;
+    margin: 0 auto;
+    width: 100%;
+}
+.notas-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background: #fff;
+    font-size: 1.05em;
+}
+.notas-table th, .notas-table td {
+    padding: 10px 8px;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+}
+.notas-table th {
+    background: #f4f6fa;
+    color: #1976d2;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.notas-table tr.menu-item {
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.notas-table tr.menu-item:hover {
+    background: #e3f2fd;
+}
+@media (max-width: 600px) {
+    .table-scroll {
+        max-height: 60dvh;
+    }
+    .notas-table th, .notas-table td {
+        padding: 8px 4px;
+        font-size: 0.98em;
+    }
+}
+.sidebar-menu .sidebar-scroll {
+    max-height: 410px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+@media (max-width: 600px) {
+    .sidebar-menu .sidebar-scroll {
+        max-height: 260px;
+    }
+}
+/* Sidebar menu styles */
+/* Sidebar menu styles */
+.sidebar-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 270px;
+    max-width: 100vw;
+    background: #f4f6fa;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.07);
+    padding: 24px 12px 12px 18px;
+    z-index: 100;
+    overflow-y: auto;
+    border-right: 1px solid #e0e0e0;
+    box-sizing: border-box;
+}
+.sidebar-menu h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+    color: #1976d2;
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
+}
+.sidebar-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar-menu .menu-item {
+    background: #fff;
+    border-radius: 6px;
+    margin-bottom: 14px;
+    padding: 14px 10px 10px 10px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.sidebar-menu .menu-item:hover {
+    background: #e3f2fd;
+    box-shadow: 0 2px 8px rgba(25,118,210,0.08);
+}
+.sidebar-menu .nfs {
+    font-weight: bold;
+    color: #333;
+    font-size: 1.08em;
+}
+.sidebar-menu .paletes {
+    color: #1976d2;
+    font-size: 0.98em;
+}
+.sidebar-menu .primeira-nf {
+    color: #888;
+    font-size: 0.93em;
+}
+
+@media (max-width: 600px) {
+    .sidebar-menu {
+        width: 100vw;
+        max-width: 100vw;
+        left: 0;
+        top: 0;
+        height: 100dvh;
+        min-height: 0;
+        position: fixed;
+        border-radius: 0;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        padding: 10px 2vw 4px 2vw;
+        overflow-y: auto;
+    }
+    .sidebar-menu .sidebar-scroll {
+        max-height: 60dvh;
+        min-height: 0;
+    }
+    .sidebar-menu .menu-item {
+        padding: 10px 6px 8px 6px;
+        font-size: 1em;
+    }
+    .sidebar-menu h3 {
+        font-size: 1.05em;
+    }
+}
+/* Switch styles */
+.switch-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 18px 0 10px 0;
+    justify-content: center;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 24px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 24px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+.switch input:checked + .slider {
+    background-color: #1976d2;
+}
+.switch input:checked + .slider:before {
+    transform: translateX(24px);
+}
+.active-env {
+    font-weight: bold;
+    color: #1976d2;
+}
+.prod {
+    color: #1976d2;
+}
+.test {
+    color: #888;
+}
+/* Mantido apenas uma definição global para body e #app para garantir tela cheia e sem scroll */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #f7f7f7;
+    width: 100vw !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    min-width: 100vw !important;
+    overflow: hidden !important;
+}
+
+#app {
+    width: 100vw !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    min-width: 100vw !important;
+    max-width: 100vw !important;
+    max-height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.cadastro-page-solid {
+    min-height: 100vh;
+    min-width: 100vw;
+    width: 100vw;
+    height: 100vh;
+    background: #e3e6ef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.cadastro-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    min-height: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Formulário de cadastro com padrão visual da tela inicial */
+.cadastro-form {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px #0001;
+    padding: 32px 24px 24px 24px;
+    min-width: 0;
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: stretch;
+    box-sizing: border-box;
+}
+/* Campo do formulário ocupa toda a largura e mantém alinhamento */
+.cadastro-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: stretch;
+    width: 100%;
+}
+/* Label do campo de cadastro */
+.cadastro-field label {
+    font-size: 1.08rem;
+    font-weight: 600;
+    color: #1a237e;
+    margin-bottom: 2px;
+    padding-left: 2px;
+}
+/* Input do cadastro: responsivo, visual limpo e largura total */
+.cadastro-input {
+    font-size: 1.13rem;
+    padding: 14px 10px;
+    border: 2px solid #3949ab;
+    border-radius: 6px;
+    background: #f5f7fa;
+    color: #222;
+    outline: none;
+    transition: border 0.2s, background 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+}
+/* Destaque ao focar no input */
+.cadastro-input:focus {
+    border: 2px solid #1a237e;
+    background: #e8eaf6;
+}
+/* Botão salvar do cadastro */
+.cadastro-btn-salvar {
+    width: 100%;
+    padding: 14px 0;
+    font-size: 1.08rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+    background: #1a237e;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s, opacity 0.2s;
+    opacity: 1;
+    margin-top: 10px;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+/* Botão salvar desabilitado */
+.cadastro-btn-salvar:disabled {
+    background: #b0b4c1;
+    color: #fff;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+/* Texto formatado do endereço */
+.cadastro-endereco-formatado {
+    font-size: 0.97rem;
+    color: #4b5678;
+    margin-top: 4px;
+    margin-left: 2px;
+    opacity: 0.85;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    padding-left: 2px;
+}
+@media (max-width: 600px) {
+    .cadastro-form {
+        min-width: 0;
+        max-width: 98vw;
+        padding: 24px 6vw 24px 6vw;
+    }
+    .cadastro-main {
+        padding: 18px 0 0 0;
+    }
+    .cadastro-header {
+        font-size: 1.3rem;
+        padding: 18px 0 10px 0;
+    }
+}
+/* Exibe endereço formatado abaixo do campo de endereço na expedição */
+.exped-endereco-formatado {
+    font-size: 0.98rem;
+    color: #4b5678;
+    margin-top: 4px;
+    margin-left: 2px;
+    opacity: 0.85;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+}
+/* --- NOVO ESTILO SÓLIDO PARA EXPEDIÇÃO --- */
+.exped-page-solid {
+    min-height: 100vh;
+    width: 100vw;
+    background: #e3e6ef;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+.exped-header {
+    width: 100vw;
+    background: #1a237e;
+    color: #fff;
+    padding: 32px 0 18px 0;
+    text-align: center;
+    box-shadow: 0 2px 8px #0001;
+    font-size: 2.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.exped-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 48px 0 0 0;
+}
+.exped-form {
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 12px #0002;
+    padding: 40px 32px 32px 32px;
+    min-width: 340px;
+    max-width: 420px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: stretch;
+}
+.exped-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.exped-field label {
+    font-size: 1.13rem;
+    font-weight: 600;
+    color: #1a237e;
+    margin-bottom: 2px;
+}
+.exped-input {
+    font-size: 1.25rem;
+    padding: 18px 12px;
+    border: 2px solid #3949ab;
+    border-radius: 6px;
+    background: #f5f7fa;
+    color: #222;
+    outline: none;
+    transition: border 0.2s, background 0.2s;
+}
+.exped-input:focus {
+    border: 2px solid #1a237e;
+    background: #e8eaf6;
+}
+.exped-btn-salvar {
+    width: 100%;
+    padding: 18px 0;
+    font-size: 1.18rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+    background: #1a237e;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s, opacity 0.2s;
+    opacity: 1;
+    margin-top: 12px;
+    letter-spacing: 0.5px;
+}
+.exped-btn-salvar:disabled {
+    background: #b0b4c1;
+    color: #fff;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+@media (max-width: 600px) {
+    .exped-form {
+        min-width: 0;
+        max-width: 98vw;
+        padding: 24px 6vw 24px 6vw;
+    }
+    .exped-main {
+        padding: 18px 0 0 0;
+    }
+    .exped-header {
+        font-size: 1.3rem;
+        padding: 18px 0 10px 0;
+    }
+}
+/* Expedição */
+.input-expedicao {
+    width: 100%;
+    font-size: 1.3em;
+    padding: 18px 12px;
+    margin: 18px 0 18px 0;
+    border: 2px solid #1976d2;
+    border-radius: 6px;
+    box-sizing: border-box;
+    outline: none;
+}
+.exped-modal {
+    margin: 18px 0 0 0;
+    padding: 18px 10px;
+    background: #f4f6fa;
+    border-radius: 8px;
+    font-size: 1.1em;
+    color: #222;
+    box-shadow: 0 1px 6px rgba(25,118,210,0.07);
+}
+.exped-modal button {
+    margin: 10px 8px 0 0;
+    padding: 10px 18px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background: #1976d2;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.exped-modal button:hover {
+    background: #125ea8;
+}
+.table-scroll {
+    max-height: 410px;
+    overflow-y: auto;
+    margin: 0 auto;
+    width: 100%;
+}
+.notas-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background: #fff;
+    font-size: 1.05em;
+}
+.notas-table th, .notas-table td {
+    padding: 10px 8px;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+}
+.notas-table th {
+    background: #f4f6fa;
+    color: #1976d2;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.notas-table tr.menu-item {
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.notas-table tr.menu-item:hover {
+    background: #e3f2fd;
+}
+@media (max-width: 600px) {
+    .table-scroll {
+        max-height: 60dvh;
+    }
+    .notas-table th, .notas-table td {
+        padding: 8px 4px;
+        font-size: 0.98em;
+    }
+}
+.sidebar-menu .sidebar-scroll {
+    max-height: 410px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+@media (max-width: 600px) {
+    .sidebar-menu .sidebar-scroll {
+        max-height: 260px;
+    }
+}
+/* Sidebar menu styles */
+/* Sidebar menu styles */
+.sidebar-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 270px;
+    max-width: 100vw;
+    background: #f4f6fa;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.07);
+    padding: 24px 12px 12px 18px;
+    z-index: 100;
+    overflow-y: auto;
+    border-right: 1px solid #e0e0e0;
+    box-sizing: border-box;
+}
+.sidebar-menu h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+    color: #1976d2;
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
+}
+.sidebar-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar-menu .menu-item {
+    background: #fff;
+    border-radius: 6px;
+    margin-bottom: 14px;
+    padding: 14px 10px 10px 10px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.sidebar-menu .menu-item:hover {
+    background: #e3f2fd;
+    box-shadow: 0 2px 8px rgba(25,118,210,0.08);
+}
+.sidebar-menu .nfs {
+    font-weight: bold;
+    color: #333;
+    font-size: 1.08em;
+}
+.sidebar-menu .paletes {
+    color: #1976d2;
+    font-size: 0.98em;
+}
+.sidebar-menu .primeira-nf {
+    color: #888;
+    font-size: 0.93em;
+}
+
+@media (max-width: 600px) {
+    .sidebar-menu {
+        width: 100vw;
+        max-width: 100vw;
+        left: 0;
+        top: 0;
+        height: 100dvh;
+        min-height: 0;
+        position: fixed;
+        border-radius: 0;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        padding: 10px 2vw 4px 2vw;
+        overflow-y: auto;
+    }
+    .sidebar-menu .sidebar-scroll {
+        max-height: 60dvh;
+        min-height: 0;
+    }
+    .sidebar-menu .menu-item {
+        padding: 10px 6px 8px 6px;
+        font-size: 1em;
+    }
+    .sidebar-menu h3 {
+        font-size: 1.05em;
+    }
+}
+/* Switch styles */
+.switch-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 18px 0 10px 0;
+    justify-content: center;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 24px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 24px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+.switch input:checked + .slider {
+    background-color: #1976d2;
+}
+.switch input:checked + .slider:before {
+    transform: translateX(24px);
+}
+.active-env {
+    font-weight: bold;
+    color: #1976d2;
+}
+.prod {
+    color: #1976d2;
+}
+.test {
+    color: #888;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+    width: 100vw !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    min-width: 100vw !important;
+    overflow: hidden !important;
+}
+
+#app {
+    width: 100vw !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    min-width: 100vw !important;
+    max-width: 100vw !important;
+    max-height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.cadastro-page-solid {
+    min-height: 100vh;
+    min-width: 100vw;
+    width: 100vw;
+    height: 100vh;
+    background: #e3e6ef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.cadastro-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    min-height: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.cadastro-form {
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 12px #0002;
+    padding: 32px 24px 24px 24px;
+    min-width: 320px;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: stretch;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+/* Campo do formulário ocupa toda a largura e mantém alinhamento */
+.cadastro-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: stretch;
+    width: 100%;
+}
+/* Label do campo de cadastro */
+.cadastro-field label {
+    font-size: 1.08rem;
+    font-weight: 600;
+    color: #1a237e;
+    margin-bottom: 2px;
+    padding-left: 2px;
+}
+/* Input do cadastro: responsivo, visual limpo e largura total */
+.cadastro-input {
+    font-size: 1.13rem;
+    padding: 14px 10px;
+    border: 2px solid #3949ab;
+    border-radius: 6px;
+    background: #f5f7fa;
+    color: #222;
+    outline: none;
+    transition: border 0.2s, background 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+}
+/* Destaque ao focar no input */
+.cadastro-input:focus {
+    border: 2px solid #1a237e;
+    background: #e8eaf6;
+}
+/* Botão salvar do cadastro */
+.cadastro-btn-salvar {
+    width: 100%;
+    padding: 14px 0;
+    font-size: 1.08rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+    background: #1a237e;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s, opacity 0.2s;
+    opacity: 1;
+    margin-top: 10px;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+/* Botão salvar desabilitado */
+.cadastro-btn-salvar:disabled {
+    background: #b0b4c1;
+    color: #fff;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+/* Texto formatado do endereço */
+.cadastro-endereco-formatado {
+    font-size: 0.97rem;
+    color: #4b5678;
+    margin-top: 4px;
+    margin-left: 2px;
+    opacity: 0.85;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    padding-left: 2px;
+}
+@media (max-width: 600px) {
+    .cadastro-form {
+        min-width: 0;
+        max-width: 98vw;
+        padding: 24px 6vw 24px 6vw;
+    }
+    .cadastro-main {
+        padding: 18px 0 0 0;
+    }
+    .cadastro-header {
+        font-size: 1.3rem;
+        padding: 18px 0 10px 0;
+    }
+}
+/* Exibe endereço formatado abaixo do campo de endereço na expedição */
+.exped-endereco-formatado {
+    font-size: 0.98rem;
+    color: #4b5678;
+    margin-top: 4px;
+    margin-left: 2px;
+    opacity: 0.85;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+}
+/* --- NOVO ESTILO SÓLIDO PARA EXPEDIÇÃO --- */
+.exped-page-solid {
+    min-height: 100vh;
+    width: 100vw;
+    background: #e3e6ef;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+.exped-header {
+    width: 100vw;
+    background: #1a237e;
+    color: #fff;
+    padding: 32px 0 18px 0;
+    text-align: center;
+    box-shadow: 0 2px 8px #0001;
+    font-size: 2.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.exped-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 48px 0 0 0;
+}
+.exped-form {
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 12px #0002;
+    padding: 40px 32px 32px 32px;
+    min-width: 340px;
+    max-width: 420px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: stretch;
+}
+.exped-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.exped-field label {
+    font-size: 1.13rem;
+    font-weight: 600;
+    color: #1a237e;
+    margin-bottom: 2px;
+}
+.exped-input {
+    font-size: 1.25rem;
+    padding: 18px 12px;
+    border: 2px solid #3949ab;
+    border-radius: 6px;
+    background: #f5f7fa;
+    color: #222;
+    outline: none;
+    transition: border 0.2s, background 0.2s;
+}
+.exped-input:focus {
+    border: 2px solid #1a237e;
+    background: #e8eaf6;
+}
+.exped-btn-salvar {
+    width: 100%;
+    padding: 18px 0;
+    font-size: 1.18rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+    background: #1a237e;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s, opacity 0.2s;
+    opacity: 1;
+    margin-top: 12px;
+    letter-spacing: 0.5px;
+}
+.exped-btn-salvar:disabled {
+    background: #b0b4c1;
+    color: #fff;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+@media (max-width: 600px) {
+    .exped-form {
+        min-width: 0;
+        max-width: 98vw;
+        padding: 24px 6vw 24px 6vw;
+    }
+    .exped-main {
+        padding: 18px 0 0 0;
+    }
+    .exped-header {
+        font-size: 1.3rem;
+        padding: 18px 0 10px 0;
+    }
+}
+/* Expedição */
+.input-expedicao {
+    width: 100%;
+    font-size: 1.3em;
+    padding: 18px 12px;
+    margin: 18px 0 18px 0;
+    border: 2px solid #1976d2;
+    border-radius: 6px;
+    box-sizing: border-box;
+    outline: none;
+}
+.exped-modal {
+    margin: 18px 0 0 0;
+    padding: 18px 10px;
+    background: #f4f6fa;
+    border-radius: 8px;
+    font-size: 1.1em;
+    color: #222;
+    box-shadow: 0 1px 6px rgba(25,118,210,0.07);
+}
+.exped-modal button {
+    margin: 10px 8px 0 0;
+    padding: 10px 18px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background: #1976d2;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.exped-modal button:hover {
+    background: #125ea8;
+}
+.table-scroll {
+    max-height: 410px;
+    overflow-y: auto;
+    margin: 0 auto;
+    width: 100%;
+}
+.notas-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background: #fff;
+    font-size: 1.05em;
+}
+.notas-table th, .notas-table td {
+    padding: 10px 8px;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+}
+.notas-table th {
+    background: #f4f6fa;
+    color: #1976d2;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.notas-table tr.menu-item {
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.notas-table tr.menu-item:hover {
+    background: #e3f2fd;
+}
+@media (max-width: 600px) {
+    .table-scroll {
+        max-height: 60dvh;
+    }
+    .notas-table th, .notas-table td {
+        padding: 8px 4px;
+        font-size: 0.98em;
+    }
+}
+.sidebar-menu .sidebar-scroll {
+    max-height: 410px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+@media (max-width: 600px) {
+    .sidebar-menu .sidebar-scroll {
+        max-height: 260px;
+    }
+}
+/* Sidebar menu styles */
+/* Sidebar menu styles */
+.sidebar-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 270px;
+    max-width: 100vw;
+    background: #f4f6fa;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.07);
+    padding: 24px 12px 12px 18px;
+    z-index: 100;
+    overflow-y: auto;
+    border-right: 1px solid #e0e0e0;
+    box-sizing: border-box;
+}
+.sidebar-menu h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+    color: #1976d2;
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
+}
+.sidebar-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar-menu .menu-item {
+    background: #fff;
+    border-radius: 6px;
+    margin-bottom: 14px;
+    padding: 14px 10px 10px 10px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.sidebar-menu .menu-item:hover {
+    background: #e3f2fd;
+    box-shadow: 0 2px 8px rgba(25,118,210,0.08);
+}
+.sidebar-menu .nfs {
+    font-weight: bold;
+    color: #333;
+    font-size: 1.08em;
+}
+.sidebar-menu .paletes {
+    color: #1976d2;
+    font-size: 0.98em;
+}
+.sidebar-menu .primeira-nf {
+    color: #888;
+    font-size: 0.93em;
+}
+
+@media (max-width: 600px) {
+    .sidebar-menu {
+        width: 100vw;
+        max-width: 100vw;
+        left: 0;
+        top: 0;
+        height: 100dvh;
+        min-height: 0;
+        position: fixed;
+        border-radius: 0;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        padding: 10px 2vw 4px 2vw;
+        overflow-y: auto;
+    }
+    .sidebar-menu .sidebar-scroll {
+        max-height: 60dvh;
+        min-height: 0;
+    }
+    .sidebar-menu .menu-item {
+        padding: 10px 6px 8px 6px;
+        font-size: 1em;
+    }
+    .sidebar-menu h3 {
+        font-size: 1.05em;
+    }
+}
+/* Switch styles */
+.switch-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 18px 0 10px 0;
+    justify-content: center;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 24px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 24px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+.switch input:checked + .slider {
+    background-color: #1976d2;
+}
+.switch input:checked + .slider:before {
+    transform: translateX(24px);
+}
+.active-env {
+    font-weight: bold;
+    color: #1976d2;
+}
+.prod {
+    color: #1976d2;
+}
+.test {
+    color: #888;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+    width: 100vw !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    min-width: 100vw !important;
+    overflow: hidden !important;
+}
+
+#app {
+    width: 100vw !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    min-width: 100vw !important;
+    max-width: 100vw !important;
+    max-height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.cadastro-page-solid {
+    min-height: 100vh;
+    min-width: 100vw;
+    width: 100vw;
+    height: 100vh;
+    background: #e3e6ef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.cadastro-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    min-height: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.cadastro-form {
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 12px #0002;
+    padding: 32px 24px 24px 24px;
+    min-width: 320px;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: stretch;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+/* Campo do formulário ocupa toda a largura e mantém alinhamento */
+.cadastro-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: stretch;
+    width: 100%;
+}
+/* Label do campo de cadastro */
+.cadastro-field label {
+    font-size: 1.08rem;
+    font-weight: 600;
+    color: #1a237e;
+    margin-bottom: 2px;
+    padding-left: 2px;
+}
+/* Input do cadastro: responsivo, visual limpo e largura total */
+.cadastro-input {
+    font-size: 1.13rem;
+    padding: 14px 10px;
+    border: 2px solid #3949ab;
+    border-radius: 6px;
+    background: #f5f7fa;
+    color: #222;
+    outline: none;
+    transition: border 0.2s, background 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+}
+/* Destaque ao focar no input */
+.cadastro-input:focus {
+    border: 2px solid #1a237e;
+    background: #e8eaf6;
+}
+/* Botão salvar do cadastro */
+.cadastro-btn-salvar {
+    width: 100%;
+    padding: 14px 0;
+    font-size: 1.08rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+    background: #1a237e;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s, opacity 0.2s;
+    opacity: 1;
+    margin-top: 10px;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+/* Botão salvar desabilitado */
+.cadastro-btn-salvar:disabled {
+    background: #b0b4c1;
+    color: #fff;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+/* Texto formatado do endereço */
+.cadastro-endereco-formatado {
+    font-size: 0.97rem;
+    color: #4b5678;
+    margin-top: 4px;
+    margin-left: 2px;
+    opacity: 0.85;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    padding-left: 2px;
+}
+@media (max-width: 600px) {
+    .cadastro-form {
+        min-width: 0;
+        max-width: 98vw;
+        padding: 24px 6vw 24px 6vw;
+    }
+    .cadastro-main {
+        padding: 18px 0 0 0;
+    }
+    .cadastro-header {
+        font-size: 1.3rem;
+        padding: 18px 0 10px 0;
+    }
+}
+/* Exibe endereço formatado abaixo do campo de endereço na expedição */
+.exped-endereco-formatado {
+    font-size: 0.98rem;
+    color: #4b5678;
+    margin-top: 4px;
+    margin-left: 2px;
+    opacity: 0.85;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+}
+/* --- NOVO ESTILO SÓLIDO PARA EXPEDIÇÃO --- */
+.exped-page-solid {
+    min-height: 100vh;
+    width: 100vw;
+    background: #e3e6ef;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+.exped-header {
+    width: 100vw;
+    background: #1a237e;
+    color: #fff;
+    padding: 32px 0 18px 0;
+    text-align: center;
+    box-shadow: 0 2px 8px #0001;
+    font-size: 2.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.exped-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 48px 0 0 0;
+}
+.exped-form {
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 12px #0002;
+    padding: 40px 32px 32px 32px;
+    min-width: 340px;
+    max-width: 420px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: stretch;
+}
+.exped-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.exped-field label {
+    font-size: 1.13rem;
+    font-weight: 600;
+    color: #1a237e;
+    margin-bottom: 2px;
+}
+.exped-input {
+    font-size: 1.25rem;
+    padding: 18px 12px;
+    border: 2px solid #3949ab;
+    border-radius: 6px;
+    background: #f5f7fa;
+    color: #222;
+    outline: none;
+    transition: border 0.2s, background 0.2s;
+}
+.exped-input:focus {
+    border: 2px solid #1a237e;
+    background: #e8eaf6;
+}
+.exped-btn-salvar {
+    width: 100%;
+    padding: 18px 0;
+    font-size: 1.18rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+    background: #1a237e;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s, opacity 0.2s;
+    opacity: 1;
+    margin-top: 12px;
+    letter-spacing: 0.5px;
+}
+.exped-btn-salvar:disabled {
+    background: #b0b4c1;
+    color: #fff;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+@media (max-width: 600px) {
+    .exped-form {
+        min-width: 0;
+        max-width: 98vw;
+        padding: 24px 6vw 24px 6vw;
+    }
+    .exped-main {
+        padding: 18px 0 0 0;
+    }
+    .exped-header {
+        font-size: 1.3rem;
+        padding: 18px 0 10px 0;
+    }
+}
+/* Expedição */
+.input-expedicao {
+    width: 100%;
+    font-size: 1.3em;
+    padding: 18px 12px;
+    margin: 18px 0 18px 0;
+    border: 2px solid #1976d2;
+    border-radius: 6px;
+    box-sizing: border-box;
+    outline: none;
+}
+.exped-modal {
+    margin: 18px 0 0 0;
+    padding: 18px 10px;
+    background: #f4f6fa;
+    border-radius: 8px;
+    font-size: 1.1em;
+    color: #222;
+    box-shadow: 0 1px 6px rgba(25,118,210,0.07);
+}
+.exped-modal button {
+    margin: 10px 8px 0 0;
+    padding: 10px 18px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background: #1976d2;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.exped-modal button:hover {
+    background: #125ea8;
+}
+.table-scroll {
+    max-height: 410px;
+    overflow-y: auto;
+    margin: 0 auto;
+    width: 100%;
+}
+.notas-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background: #fff;
+    font-size: 1.05em;
+}
+.notas-table th, .notas-table td {
+    padding: 10px 8px;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+}
+.notas-table th {
+    background: #f4f6fa;
+    color: #1976d2;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.notas-table tr.menu-item {
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.notas-table tr.menu-item:hover {
+    background: #e3f2fd;
+}
+@media (max-width: 600px) {
+    .table-scroll {
+        max-height: 60dvh;
+    }
+    .notas-table th, .notas-table td {
+        padding: 8px 4px;
+        font-size: 0.98em;
+    }
+}
+.sidebar-menu .sidebar-scroll {
+    max-height: 410px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+@media (max-width: 600px) {
+    .sidebar-menu .sidebar-scroll {
+        max-height: 260px;
+    }
+}
+/* Sidebar menu styles */
+/* Sidebar menu styles */
+.sidebar-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 270px;
+    max-width: 100vw;
+    background: #f4f6fa;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.07);
+    padding: 24px 12px 12px 18px;
+    z-index: 100;
+    overflow-y: auto;
+    border-right: 1px solid #e0e0e0;
+    box-sizing: border-box;
+}
+.sidebar-menu h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+    color: #1976d2;
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
+}
+.sidebar-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar-menu .menu-item {
+    background: #fff;
+    border-radius: 6px;
+    margin-bottom: 14px;
+    padding: 14px 10px 10px 10px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.sidebar-menu .menu-item:hover {
+    background: #e3f2fd;
+    box-shadow: 0 2px 8px rgba(25,118,210,0.08);
+}
+.sidebar-menu .nfs {
+    font-weight: bold;
+    color: #333;
+    font-size: 1.08em;
+}
+.sidebar-menu .paletes {
+    color: #1976d2;
+    font-size: 0.98em;
+}
+.sidebar-menu .primeira-nf {
+    color: #888;
+    font-size: 0.93em;
+}
+
+@media (max-width: 600px) {
+    .sidebar-menu {
+        width: 100vw;
+        max-width: 100vw;
+        left: 0;
+        top: 0;
+        height: 100dvh;
+        min-height: 0;
+        position: fixed;
+        border-radius: 0;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        padding: 10px 2vw 4px 2vw;
+        overflow-y: auto;
+    }
+    .sidebar-menu .sidebar-scroll {
+        max-height: 60dvh;
+        min-height: 0;
+    }
+    .sidebar-menu .menu-item {
+        padding: 10px 6px 8px 6px;
+        font-size: 1em;
+    }
+    .sidebar-menu h3 {
+        font-size: 1.05em;
+    }
+}
+/* Switch styles */
+.switch-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 18px 0 10px 0;
+    justify-content: center;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 24px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 24px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+.switch input:checked + .slider {
+    background-color: #1976d2;
+}
+.switch input:checked + .slider:before {
+    transform: translateX(24px);
+}
+.active-env {
+    font-weight: bold;
+    color: #1976d2;
+}
+.prod {
+    color: #1976d2;
+}
+.test {
+    color: #888;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+    width: 100vw !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    min-width: 100vw !important;
+    overflow: hidden !important;
+}
+
+#app {
+    width: 100vw !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    min-width: 100vw !important;
+    max-width: 100vw !important;
+    max-height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.cadastro-page-solid {
+    min-height: 100vh;
+    min-width: 100vw;
+    width: 100vw;
+    height: 100vh;
+    background: #e3e6ef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.cadastro-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    min-height: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.cadastro-form {
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 12px #0002;
+    padding: 32px 24px 24px 24px;
+    min-width: 320px;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: stretch;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+/* Campo do formulário ocupa toda a largura e mantém alinhamento */
+.cadastro-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: stretch;
+    width: 100%;
+}
+/* Label do campo de cadastro */
+.cadastro-field label {
+    font-size: 1.08rem;
+    font-weight: 600;
+    color: #1a237e;
+    margin-bottom: 2px;
+    padding-left: 2px;
+}
+/* Input do cadastro: responsivo, visual limpo e largura total */
+.cadastro-input {
+    font-size: 1.13rem;
+    padding: 14px 10px;
+    border: 2px solid #3949ab;
+    border-radius: 6px;
+    background: #f5f7fa;
+    color: #222;
+    outline: none;
+    transition: border 0.2s, background 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+}
+/* Destaque ao focar no input */
+.cadastro-input:focus {
+    border: 2px solid #1a237e;
+    background: #e8eaf6;
+}
+/* Botão salvar do cadastro */
+.cadastro-btn-salvar {
+    width: 100%;
+    padding: 14px 0;
+    font-size: 1.08rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+    background: #1a237e;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s, opacity 0.2s;
+    opacity: 1;
+    margin-top: 10px;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+/* Botão salvar desabilitado */
+.cadastro-btn-salvar:disabled {
+    background: #b0b4c1;
+    color: #fff;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+/* Texto formatado do endereço */
+.cadastro-endereco-formatado {
+    font-size: 0.97rem;
+    color: #4b5678;
+    margin-top: 4px;
+    margin-left: 2px;
+    opacity: 0.85;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    padding-left: 2px;
+}
+@media (max-width: 600px) {
+    .cadastro-form {
+        min-width: 0;
+        max-width: 98vw;
+        padding: 24px 6vw 24px 6vw;
+    }
+    .cadastro-main {
+        padding: 18px 0 0 0;
+    }
+    .cadastro-header {
+        font-size: 1.3rem;
+        padding: 18px 0 10px 0;
+    }
+}
+/* Exibe endereço formatado abaixo do campo de endereço na expedição */
+.exped-endereco-formatado {
+    font-size: 0.98rem;
+    color: #4b5678;
+    margin-top: 4px;
+    margin-left: 2px;
+    opacity: 0.85;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+}
+/* --- NOVO ESTILO SÓLIDO PARA EXPEDIÇÃO --- */
+.exped-page-solid {
+    min-height: 100vh;
+    width: 100vw;
+    background: #e3e6ef;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+.exped-header {
+    width: 100vw;
+    background: #1a237e;
+    color: #fff;
+    padding: 32px 0 18px 0;
+    text-align: center;
+    box-shadow: 0 2px 8px #0001;
+    font-size: 2.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.exped-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 48px 0 0 0;
+}
+.exped-form {
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 12px #0002;
+    padding: 40px 32px 32px 32px;
+    min-width: 340px;
+    max-width: 420px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: stretch;
+}
+.exped-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.exped-field label {
+    font-size: 1.13rem;
+    font-weight: 600;
+    color: #1a237e;
+    margin-bottom: 2px;
+}
+.exped-input {
+    font-size: 1.25rem;
+    padding: 18px 12px;
+    border: 2px solid #3949ab;
+    border-radius: 6px;
+    background: #f5f7fa;
+       color: #222;
+    outline: none;
+    transition: border 0.2s, background 0.2s;
+}
+.exped-input:focus {
+    border: 2px solid #1a237e;
+    background: #e8eaf6;
+}
+.exped-btn-salvar {
+    width: 100%;
+    padding: 18px 0;
+    font-size: 1.18rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+    background: #1a237e;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s, opacity 0.2s;
+    opacity: 1;
+    margin-top: 12px;
+    letter-spacing: 0.5px;
+}
+.exped-btn-salvar:disabled {
+    background: #b0b4c1;
+    color: #fff;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+@media (max-width: 600px) {
+    .exped-form {
+        min-width: 0;
+        max-width: 98vw;
+        padding: 24px 6vw 24px 6vw;
+    }
+    .exped-main {
+        padding: 18px 0 0 0;
+    }
+    .exped-header {
+        font-size: 1.3rem;
+        padding: 18px 0 10px 0;
+    }
+}
+/* Expedição */
+.input-expedicao {
+    width: 100%;
+    font-size: 1.3em;
+    padding: 18px 12px;
+    margin: 18px 0 18px 0;
+    border: 2px solid #1976d2;
+    border-radius: 6px;
+    box-sizing: border-box;
+    outline: none;
+}
+.exped-modal {
+    margin: 18px 0 0 0;
+    padding: 18px 10px;
+    background: #f4f6fa;
+    border-radius: 8px;
+    font-size: 1.1em;
+    color: #222;
+    box-shadow: 0 1px 6px rgba(25,118,210,0.07);
+}
+.exped-modal button {
+    margin: 10px 8px 0 0;
+    padding: 10px 18px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background: #1976d2;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.exped-modal button:hover {
+    background: #125ea8;
+}
+.table-scroll {
+    max-height: 410px;
+    overflow-y: auto;
+    margin: 0 auto;
+    width: 100%;
+}
+.notas-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background: #fff;
+    font-size: 1.05em;
+}
+.notas-table th, .notas-table td {
+    padding: 10px 8px;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+}
+.notas-table th {
+    background: #f4f6fa;
+    color: #1976d2;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.notas-table tr.menu-item {
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.notas-table tr.menu-item:hover {
+    background: #e3f2fd;
+}
+@media (max-width: 600px) {
+    .table-scroll {
+        max-height: 60dvh;
+    }
+    .notas-table th, .notas-table td {
+        padding: 8px 4px;
+        font-size: 0.98em;
+    }
+}
+.sidebar-menu .sidebar-scroll {
+    max-height: 410px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+@media (max-width: 600px) {
+    .sidebar-menu .sidebar-scroll {
+        max-height: 260px;
+    }
+}
+/* Sidebar menu styles */
+/* Sidebar menu styles */
+.sidebar-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 270px;
+    max-width: 100vw;
+    background: #f4f6fa;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.07);
+    padding: 24px 12px 12px 18px;
+    z-index: 100;
+    overflow-y: auto;
+    border-right: 1px solid #e0e0e0;
+    box-sizing: border-box;
+}
+.sidebar-menu h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+    color: #1976d2;
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
+}
+.sidebar-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar-menu .menu-item {
+    background: #fff;
+    border-radius: 6px;
+    margin-bottom: 14px;
+    padding: 14px 10px 10px 10px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.sidebar-menu .menu-item:hover {
+    background: #e3f2fd;
+    box-shadow: 0 2px 8px rgba(25,118,210,0.08);
+}
+.sidebar-menu .nfs {
+    font-weight: bold;
+    color: #333;
+    font-size: 1.08em;
+}
+.sidebar-menu .paletes {
+    color: #1976d2;
+    font-size: 0.98em;
+}
+.sidebar-menu .primeira-nf {
+    color: #888;
+    font-size: 0.93em;
+}
+
+@media (max-width: 600px) {
+    .sidebar-menu {
+        width: 100vw;
+        max-width: 100vw;
+        left: 0;
+        top: 0;
+        height: 100dvh;
+        min-height: 0;
+        position: fixed;
+        border-radius: 0;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        padding: 10px 2vw 4px 2vw;
+        overflow-y: auto;
+    }
+    .sidebar-menu .sidebar-scroll {
+        max-height: 60dvh;
+        min-height: 0;
+    }
+    .sidebar-menu .menu-item {
+        padding: 10px 6px 8px 6px;
+        font-size: 1em;
+    }
+    .sidebar-menu h3 {
+        font-size: 1.05em;
+    }
+}
+/* Switch styles */
+.switch-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 18px 0 10px 0;
+    justify-content: center;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 24px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 24px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+.switch input:checked + .slider {
+    background-color: #1976d2;
+}
+.switch input:checked + .slider:before {
+    transform: translateX(24px);
+}
+.active-env {
+    font-weight: bold;
+    color: #1976d2;
+}
+.prod {
+    color: #1976d2;
+}
+.test {
+    color: #888;
+}

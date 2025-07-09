@@ -1,0 +1,126 @@
+    <!-- MODAL ERRO PALETE DE OUTRA CARGA -->
+    <template v-if="modalPaleteErro">
+        <div class="modal-fullscreen" style="z-index:10001; position:fixed; top:0; left:0; width:100vw; height:100vh; display:flex; align-items:center; justify-content:center;background:rgba(0,0,0,0.18);">
+            <div class="modal-content" style="width:100%;max-width:340px;padding:32px 24px;background:#fff;border-radius:12px;box-shadow:0 2px 12px #e53935cc;display:flex;flex-direction:column;align-items:center;">
+                <p style="font-size:1.15rem;color:#e53935;font-weight:700;margin-bottom:18px;">Palete de outra carga</p>
+                <button @click="fecharModalPaleteErro" style="padding:10px 28px;background:#e53935;color:#fff;border:none;border-radius:6px;font-size:1.08rem;font-weight:600;cursor:pointer;">Continuar cadastro</button>
+            </div>
+        </div>
+    </template>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro NF</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+    <div id="app" style="min-height:100vh;min-width:100vw;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#f5f5f5;">
+        <!-- ETAPA 1: TELA INICIAL -->
+        <template v-if="!notasModalVisivel && !cadastroAtivo">
+            <div class="modal-fullscreen" style="z-index:9997; position:fixed; top:0; left:0; width:100vw; height:100vh; display:flex; align-items:center; justify-content:center;background:rgba(0,0,0,0.10);">
+                <div class="modal-content" style="width:100%;max-width:480px;padding:32px 24px;background:#fff;border-radius:12px;box-shadow:0 2px 12px #0001;display:flex;flex-direction:column;align-items:center;">
+                    <h1 style="font-size:2rem;font-weight:700;margin-bottom:24px;">Cadastro de endereços</h1>
+                    <button @click="iniciarCadastro" style="width:100%;padding:12px 0;background:#22b455;color:#fff;font-size:1.1rem;font-weight:600;border:none;border-radius:6px;cursor:pointer;margin-bottom:24px;">Iniciar Cadastro</button>
+                    <div v-if="resultado" :class="{'valid': isValid, 'invalid': !isValid}" style="width:100%;text-align:center;margin-bottom:16px;">
+                        {{ resultado }}
+                    </div>
+                    <button @click="abrirMenuConfiguracoes" style="background:none;border:none;cursor:pointer;position:absolute;top:18px;right:18px;padding:8px;">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1976d2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 8 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 5 15.4a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 8a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09A1.65 1.65 0 0 0 16 4.6a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9c.14.31.22.65.22 1v.09A1.65 1.65 0 0 0 21 12c0 .35-.08.69-.22 1z"/></svg>
+                    </button>
+                    <div v-if="menuConfiguracoesVisivel" style="position:fixed;z-index:10010;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.18);display:flex;align-items:center;justify-content:center;">
+                        <div style="background:#fff;padding:32px 24px 24px 24px;border-radius:12px;box-shadow:0 2px 12px #0002;min-width:260px;max-width:98vw;position:relative;">
+                            <button @click="fecharMenuConfiguracoes" style="position:absolute;top:12px;right:12px;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#1976d2;">&times;</button>
+                            <h2 style="font-size:1.2rem;font-weight:600;margin-bottom:12px;">Configurações</h2>
+                            <div class="switch-container" style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+                                <span :class="{'active-env': !ambiente}" style="font-weight:600;color:#2196f3;">Testes</span>
+                                <label class="switch">
+                                  <input type="checkbox" v-model="ambiente" @change="toggleAmbiente">
+                                  <span class="slider"></span>
+                                </label>
+                                <span :class="{'active-env': ambiente}" style="font-weight:600;color:#388e3c;">Produção</span>
+                            </div>
+                            <p style="margin:0;font-size:1rem;">Ambiente Atual: <strong :class="ambiente ? 'prod' : 'test'">{{ ambiente ? 'Produção' : 'Testes' }}</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <!-- ETAPA 2: MODAL DE NOTAS NÃO ENDEREÇADAS -->
+        <template v-if="notasModalVisivel && !cadastroAtivo">
+            <div class="modal-fullscreen" style="z-index:9998; position:fixed; top:0; left:0; width:100vw; height:100vh; display:flex; align-items:center; justify-content:center;background:rgba(0,0,0,0.12);">
+                <div class="modal-content" style="width:100%;max-width:480px;padding:32px 24px;background:#fff;border-radius:12px;box-shadow:0 2px 12px #0002;display:flex;flex-direction:column;align-items:center;">
+                    <button class="btn-voltar" @click="fecharNotasModal" style="align-self:flex-start;margin-bottom:12px;background:#eee;border:none;padding:6px 16px;border-radius:6px;cursor:pointer;font-size:1rem;">⬅️ Voltar</button>
+                    <h3 style="font-size:1.2rem;font-weight:600;margin-bottom:16px;">📦 Paletes não endereçados</h3>
+                    <div class="table-scroll" style="width:100%;max-height:320px;overflow:auto;">
+                      <table class="notas-table" style="width:100%;border-collapse:collapse;">
+                        <thead>
+                          <tr style="background:#f5f5f5;">
+                            <th style="padding:8px 4px;text-align:left;">🧾 Nota Fiscal</th>
+                            <th style="padding:8px 4px;text-align:left;">🏗️ Paletes</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr v-for="nota in notasNaoEnderecadas" :key="nota.NFS" v-if="nota && nota.NFS" @click="selecionarNota(nota)" class="menu-item" style="cursor:pointer;transition:background 0.2s;">
+                            <td style="padding:8px 4px;">{{ String(nota.NFS).substring(0, 15) }}</td>
+                            <td style="padding:8px 4px;">{{ nota.TotalPaletes }}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <!-- ETAPA 3: HUB CADASTRO COMO PÁGINA EXCLUSIVA -->
+        <template v-if="cadastroAtivo">
+            <div class="cadastro-page-solid">
+                <header class="cadastro-header">
+                    <h2>Cadastro</h2>
+                </header>
+                <main class="cadastro-main">
+                    <form class="cadastro-form" @submit.prevent="onSalvarCadastro">
+                        <div class="cadastro-field">
+                            <label for="inputEndereco">Endereço</label>
+                            <input
+                                id="inputEndereco"
+                                ref="inputEndereco"
+                                v-model="inputEndereco"
+                                @focus="onEnderecoFocus"
+                                @keyup.enter="setPaleteFoco"
+                                @input="onEnderecoInput"
+                                class="cadastro-input"
+                                autocomplete="off"
+                                :autofocus="enderecoFoco"
+                                placeholder="Código de Barras do Endereço" />
+                            <div v-if="inputEndereco.length === 8" class="cadastro-endereco-formatado">
+                                Rua {{ inputEndereco.substring(0,2) }} Posição {{ inputEndereco.substring(2,4) }} Nível {{ inputEndereco.substring(4,6) }}
+                            </div>
+                        </div>
+                        <div class="cadastro-field">
+                            <label for="inputPalete">Palete</label>
+                            <input
+                                id="inputPalete"
+                                ref="inputPalete"
+                                v-model="inputPalete"
+                                @focus="onPaleteFocus"
+                                @keyup.enter="onSalvarCadastro"
+                                @input="onPaleteInput"
+                                class="cadastro-input"
+                                autocomplete="off"
+                                :autofocus="paleteFoco"
+                                placeholder="QR Code do Palete" />
+                        </div>
+                        <button type="submit" :disabled="!inputEnderecoValido || !inputPaleteValido" class="cadastro-btn-salvar">Salvar</button>
+                        <button type="button" class="cadastro-btn-finalizar" @click="finalizarCadastro" style="margin-top:18px;background:#1976d2;color:#fff;padding:10px 0;width:100%;border:none;border-radius:6px;font-size:1.08rem;font-weight:600;cursor:pointer;">Finalizar Cadastro</button>
+                    </form>
+                </main>
+            </div>
+        </template>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
